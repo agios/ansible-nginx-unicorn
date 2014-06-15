@@ -28,6 +28,7 @@ Role Variables
         format supported by nginx)
     -   `root` defaults to `/var/www/{{ name }}/current` (Capistrano
         compatible)
+    -   `listen` defaults to `[::]:80` (Both IPv4 and IPv6)
     -   `access_log` is a dict with the following options:
         -   `path` defaults to `/var/log/nginx/{{ name }}.access.log`
         -   `format` is optional, can be used to specify a custom nginx
