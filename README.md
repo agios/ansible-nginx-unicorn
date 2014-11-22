@@ -38,8 +38,9 @@ Role Variables
         generated. It contains the following options:
         -   `certificate` required, path to ssl certificate
         -   `certificate_key` required, path to ssl certificate key
-        -   `sensitive_uris` required, nginx uri expressions that will
-            be served using https
+        -   `ssl_only` if set to `true`, always redirect to ssl
+        -   `sensitive_uris` required unless `ssl_only`, nginx uri
+            expressions that will be served using https
         -   `access_log` as above, for https requests
         -   `error_log` as above, for https requests
 
@@ -77,6 +78,10 @@ shown):
         - name: 'my_app2'
           server_name: 'my-app2.example.com *.mydomain.com'
           root: '/var/test_apps/app2'
+          ssl:
+            certificate: /etc/ssl/localcerts/my_app2.crt
+            certificate_key: /etc/ssl/localcerts/my_app2.key
+            ssl_only: true
 ```
 
 License
