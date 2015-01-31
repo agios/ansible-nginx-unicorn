@@ -39,6 +39,7 @@ Role Variables
         -   `certificate` required, path to ssl certificate
         -   `certificate_key` required, path to ssl certificate key
         -   `ssl_only` if set to `true`, always redirect to ssl
+        -   `spdy` if set to `true`, enable spdy support
         -   `sensitive_uris` required unless `ssl_only`, nginx uri
             expressions that will be served using https
         -   `access_log` as above, for https requests

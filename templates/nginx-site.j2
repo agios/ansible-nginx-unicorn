@@ -52,7 +52,7 @@ server {
 
 {% if 'ssl' in item %}
 server {
-    listen 443;
+    listen 443 ssl {% if (('spdy' in item.ssl) and ( item.ssl.spdy )) %}spdy{% endif %};
     server_name {{ item.server_name }};
 
     root {{ root }};   # <--- be sure to point to 'public'!
