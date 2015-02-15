@@ -11,7 +11,7 @@ server {
 
     root {{ root }};   # <--- be sure to point to 'public'!
 
-    client_max_body_size 5M;
+    client_max_body_size {{item.client_max_body_size | default('5M')}};
 
     # Send sensitive stuff via https
 {% if ssl_only %}
