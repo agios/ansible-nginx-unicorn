@@ -40,6 +40,9 @@ Role Variables
         -   `certificate_key` required, path to ssl certificate key
         -   `ssl_only` if set to `true`, always redirect to ssl
         -   `spdy` if set to `true`, enable spdy support
+        -   `gzip_assets` if set to `true`, enable serving gzipped
+            'assets' folder, cached for 16w (useful for rails with asset
+            precompilation)
         -   `sensitive_uris` required unless `ssl_only`, nginx uri
             expressions that will be served using https
         -   `access_log` as above, for https requests
