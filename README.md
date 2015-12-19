@@ -1,3 +1,5 @@
+Notice: Not maintained anymore, docker is better suited for such deployments
+
 Ansible Nginx/Unicorn setup
 ===========================
 
